@@ -1,0 +1,139 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid;
+	padding: 16px;
+
+	& .logo {
+		& .logo-img {
+			width: 100px;
+			// height: 100px;
+		}
+	}
+	& .nav-items-list {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		font-size: 24px;
+		& li {
+			margin: 12px;
+		}
+
+		& .nav-items-li {
+			cursor: pointer;
+		}
+		& img {
+			width: 32px;
+			height: 32px;
+		}
+	}
+}
+
+.body {
+	padding: 16px;
+	& .search-input {
+		display: flex;
+		margin-bottom: 16px;
+
+		& input {
+			padding: 8px;
+			border-radius: 8px;
+			border: 1px solid #e0e0e0;
+			font-size: 16px;
+		}
+	}
+	& .restaurant-card-container {
+		display: flex;
+		column-gap: 24px;
+		row-gap: 24px;
+		flex-wrap: wrap;
+		width: auto;
+		height: 100%;
+
+		& .restaurant-card {
+			// padding: 8px;
+			height: 350px;
+			cursor: pointer;
+			width: 300px;
+			box-shadow: 0px 0px 16px -4px lightgray;
+			border-radius: 8px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+
+			& .card-img {
+				display: flex;
+				height: 70%;
+				width: 100%;
+				& img {
+					width: 100%;
+					// flex: 1;
+					object-fit: cover;
+				}
+			}
+
+			& .card-body {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				row-gap: 6px;
+				justify-content: center;
+				padding: 0px 8px;
+
+				& .title {
+					font-size: 16px;
+					font-weight: 700;
+				}
+
+				& .rating-container {
+					font-size: 16px;
+					display: flex;
+					column-gap: 8px;
+					font-weight: 500;
+					align-items: center;
+
+					& .rating {
+						display: flex;
+						align-items: center;
+						column-gap: 4px;
+						& img {
+							width: 16px;
+						}
+					}
+
+					& .rating::after {
+						content: ".";
+						position: relative;
+						top: -6px;
+						transform: scale(1.5);
+					}
+				}
+
+				& .cuisine-container {
+					display: flex;
+					flex-direction: column;
+					font-size: 16px;
+					color: gray;
+					// row-gap: 4px;
+				}
+			}
+
+			&:hover {
+				transition: 0.2s ease;
+				transform: scale(0.98);
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: rgb(2, 6, 12);
+	display: flex;
+	flex-direction: column;
+	padding: 32px;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+}
