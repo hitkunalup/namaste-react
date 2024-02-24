@@ -1,14 +1,14 @@
 import React from "react";
 import HeaderComponent from "./components/HeaderComponent";
-import BodyComponent from "./components/BodyComponent";
 import Footer from "./components/Footer";
 import "./index.scss";
+import { Outlet } from "react-router-dom";
 
 const FoodOrdering = () => {
 	return (
 		<div>
 			<HeaderComponent />
-			<BodyComponent />
+			<Outlet />
 			<Footer />
 		</div>
 	);

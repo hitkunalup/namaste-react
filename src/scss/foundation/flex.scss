@@ -1,0 +1,109 @@
+$flex-config: (
+  justify-content: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+    space: space-evenly,
+  ),
+  align-items: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch,
+  ),
+  align-content: (
+    start: flex-start,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+    stretch: stretch,
+  ),
+);
+
+@each $baseClass, $variants in $flex-config {
+  @each $variantName, $value in $variants {
+    .#{$baseClass}-#{$variantName} {
+      #{$baseClass}: #{$value} !important;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex,
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.flex-rev {
+  flex-direction: row-reverse;
+}
+
+.flex-col,
+.flex-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.flex-col-reverse,
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-row-rev {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.flex-half {
+  flex: 0.5;
+}
+
+.flex-sixth {
+  flex: 0.6;
+}
+
+.flex-seventh {
+  flex: 0.7;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}

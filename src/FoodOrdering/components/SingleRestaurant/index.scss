@@ -1,0 +1,45 @@
+.restaurant-menu {
+	// & .restaurant-menu-wrapper {
+	// 	max-width: 800px;
+	// 	// min-height: 800px;
+	// 	margin: 20px auto 0;
+	// }
+	max-width: 800px;
+	min-height: 800px;
+	margin: 16px auto 0;
+
+	& h1 {
+		margin-bottom: 0;
+	}
+
+	& .restaurant-menu--wrapper {
+		border-bottom: 1px dashed #bdbdbd;
+	}
+
+	& .restaurant-menu--wrapper--1 {
+		border-bottom: 1px dashed #bdbdbd;
+	}
+
+	& .restaurant-menu--wrapper--rating {
+		border: 1px solid #ededed;
+	}
+
+	& .restaurant-menu--wrapper---rating-div {
+		border-bottom: 1px solid #ededed;
+	}
+	& .restaurant-menu--wrapper---rating-img {
+		width: 16px;
+		height: 16px;
+	}
+
+	& .delivery-rider-svg {
+		width: 16px;
+		height: 16px;
+		& path {
+			fill: #6d6d6d;
+		}
+	}
+	& .menu--item:not(:last-of-type) {
+		border-bottom: 1px dashed #bdbdbd;
+	}
+}

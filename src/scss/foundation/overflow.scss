@@ -1,0 +1,15 @@
+$overflowTypes: (auto, hidden, scroll, visible, clip, overlay, unset);
+
+@each $key in $overflowTypes {
+  .overflow-y-#{$key} {
+    overflow-y: $key;
+  }
+
+  .overflow-x-#{$key} {
+    overflow-x: $key;
+  }
+
+  .overflow-#{$key} {
+    overflow: $key;
+  }
+}

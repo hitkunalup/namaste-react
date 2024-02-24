@@ -1,0 +1,13 @@
+$positionsList: (
+  absolute: absolute,
+  fixed: fixed,
+  relative: relative,
+  sticky: sticky,
+  static: static,
+);
+
+@each $key, $value in $positionsList {
+  .position-#{$key} {
+    position: #{$value} !important;
+  }
+}

@@ -3,6 +3,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import FoodOrdering from "./FoodOrdering";
+import RoutesComponent from "./RoutesComponent";
+import "./scss/spacing.scss";
+import "./scss/common.scss";
+import "./scss/foundation/borders.scss";
+import "./scss/foundation/colors.scss";
+import "./scss/foundation/elevations.scss";
+import "./scss/foundation/flex.scss";
+import "./scss/foundation/grid.scss";
+import "./scss/foundation/position.scss";
+import "./scss/foundation/spacings.scss";
+import "./scss/foundation/typography.scss";
 
 // const parent = React.createElement("div", { id: "parent", key: "parent" }, [
 // 	React.createElement("div", { id: "child", key: "child" }, [
@@ -50,4 +61,4 @@ import FoodOrdering from "./FoodOrdering";
 
 // console.log(HeadingComponent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<FoodOrdering />);
+root.render(<RoutesComponent />);

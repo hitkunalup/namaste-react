@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { CART_URL, LOGO_IMAGE_URL } from "../../utils/constants";
 
 const HeaderComponent = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const navigate = useNavigate();
 	return (
 		<div className='header'>
 			<div className='logo'>
@@ -10,10 +12,12 @@ const HeaderComponent = () => {
 			</div>
 			<div className='nav-items'>
 				<ul className='nav-items-list'>
-					<li className='nav-items-li'>Home</li>
-					<li className='nav-items-li'>About</li>
-					<li className='nav-items-li'>Contact Us</li>
-					<img className='nav-items-li' src={CART_URL} />
+					<li onClick={() => navigate("/")}  className='nav-items-li'>Home</li>
+					<li onClick={() => navigate("/about")} className='nav-items-li'>
+						About
+					</li>
+					<li onClick={() => navigate("/contact")} className='nav-items-li'>Contact Us</li>
+					<img onClick={() => navigate("/cart")} className='nav-items-li' src={CART_URL} />
 					{isLoggedIn ? (
 						<button
 							onClick={() => setIsLoggedIn(false)}

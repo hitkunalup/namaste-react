@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { CDN_URL, FOOD_RATING_IMG } from "../../utils/constants";
-import { restaurants } from "../../utils/data";
 import Shimmer from "./Shimmer";
 
 const RestaurantCard = ({ restaurant }) => {
+	const navigate = useNavigate();
+	const onRestaurantClick = () => {
+		navigate(`/restaurant/${restaurant.id}`);
+	};
 	return (
-		<div key={restaurant.id} className='restaurant-card'>
+		<div
+			onClick={(e) => {
+				e.stopPropagation();
+				onRestaurantClick();
+			}}
+			key={restaurant.id}
+			className='restaurant-card'>
 			<div className='card-img'>
 				<img src={CDN_URL + restaurant.cloudinaryImageId} />
 			</div>

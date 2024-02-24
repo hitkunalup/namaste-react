@@ -1,0 +1,130 @@
+$fontSize: (
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  24: 24px,
+  20: 20px,
+  18: 18px,
+  32: 32px,
+);
+
+$lineHeight: (
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  32: 32px,
+);
+
+$textAlignment: (left, right, center, justify, initial, inherit);
+
+$textTransform: (capitalize, uppercase, lowercase, none);
+
+@each $key, $value in $fontSize {
+  .fs-#{$key} {
+    font-size: #{$value} !important;
+  }
+}
+
+@each $key, $value in $lineHeight {
+  .lh-#{$key} {
+    line-height: #{$value};
+  }
+}
+
+$fontWeights: (400, 500, 600, 700, 800, 900);
+
+@each $key in $fontWeights {
+  .fw-#{$key} {
+    font-weight: #{$key};
+  }
+}
+
+@each $value in $textAlignment {
+  .txt-align-#{$value} {
+    text-align: #{$value} !important;
+  }
+}
+
+@each $key in $textTransform {
+  .txt-transform-#{$key} {
+    text-transform: #{$key};
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.manrope-font {
+  font-family: "Manrope", sans-serif;
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+
+// !!! Need to map these to OLD THEME
+// TEXT-COLORS
+$text-color-default: #282624;
+$text-color-subtle: #7c7972;
+$text-color-muted: #35312d;
+$text-color-disabled: #b5b1ad;
+$text-color-error: #e53811;
+
+// FONT-SIZE
+$font-size-tiny-caution: 10px;
+$font-size-small: 12px;
+$font-size-default: 14px;
+$font-size-large: 16px;
+$font-size-xl: 20px;
+$font-size-xxl: 24px;
+$font-size-xxxl-caution: 32px;
+
+// FONT-WEIGHT
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+.text {
+  margin: 0;
+  color: var(--neutral-8);
+  font-size: 14px;
+  line-height: 20px;
+
+  // Font Weight
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-weight: $font-medium;
+  }
+
+  &.semi-bold {
+    font-weight: $font-semi-bold;
+  }
+
+  &.bold {
+    font-weight: $font-bold;
+  }
+
+  &.xl {
+    font-size: 20px;
+  }
+
+  &.large {
+    font-size: 16px;
+  }
+}

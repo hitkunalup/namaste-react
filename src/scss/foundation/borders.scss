@@ -1,0 +1,77 @@
+$valuesList: (
+  2: 2px,
+  4: 4px,
+  6: 6px,
+  8: 8px,
+  12: 12px,
+  16: 16px,
+  24: 24px,
+  30: 30px,
+  36: 36px,
+);
+
+$stylesList: (
+  dashed: "dashed"
+);
+
+@each $key, $value in $valuesList {
+  .rounded-#{$key} {
+    border-radius: #{$value} !important;
+  }
+
+  .rounded-bl-#{$key} {
+    border-bottom-left-radius: #{$value} !important;
+  }
+
+  .rounded-br-#{$key} {
+    border-bottom-right-radius: #{$value} !important;
+  }
+
+  .rounded-tl-#{$key} {
+    border-top-left-radius: #{$value} !important;
+  }
+
+  .rounded-tr-#{$key} {
+    border-top-right-radius: #{$value} !important;
+  }
+
+  .rounded-bottom-#{$key} {
+    border-bottom-left-radius: #{$value} !important;
+    border-bottom-right-radius: #{$value} !important;
+  }
+
+  .rounded-top-#{$key} {
+    border-top-left-radius: #{$value} !important;
+    border-top-right-radius: #{$value} !important;
+  }
+}
+
+@each $key, $value in $stylesList {
+  .border-#{$key} {
+    border-style: #{$value} !important;
+  }
+}
+
+.rounded {
+  border-radius: 50% !important;
+}
+
+.border-b {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.border-t {
+  border-top: 1px solid #f0f0f0;
+}
+
+.bordered {
+  border: 1px solid #f0f0f0;
+}
+
+.border-b-2 {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.no-border {
+  border: none;
+}
